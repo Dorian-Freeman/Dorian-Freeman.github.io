@@ -1,1 +1,1 @@
-# Dorian-Freeman.github.io
+The goal for us, us being Sneaker Gods is to help people that like shoes. We give people our personal opinions on shoes and show them why we think so. We say if the shoe is trending, we give a review/star rating, and tell peple if the shoe is hyped up. 
