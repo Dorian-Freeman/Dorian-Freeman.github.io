@@ -32,8 +32,14 @@
         "4.jpg",
         "5.jpg"
       ];
+      
+      var playing = false;
+      
 	// This function will update the image and the image index.
 	function updateImage() {
+
+		if(!playing)
+			return;
 
 		// Find the image to update.
 		var image = document.getElementById("currentImage");
@@ -49,6 +55,17 @@
         		currentImageIndex = 0;
 
 	}
+      
+      function play() {
+      	
+      	playing = true;
+      }
+      
+      function pause() {
+      
+      	playing = false;	
+      }
+      }
       
       // Set an interval timer that calls updateImage() every 1000 milliseconds
       setInterval(updateImage, 1000);
@@ -69,7 +86,7 @@
       
       <div class="row">
         <div class="col-md-2"></div>
-        <div class="col-md-3"><img id="currentImage" class="img-responsive" src="http://5.kicksonfire.net/wp-content/uploads/2015/10/Release-Date-Hologram-Nike-Air-Foamposite-One-2.jpg?9a1c09"></div>
+        <div class="col-md-3"><img onmouseenter="play()" onmouseleave="pause()" id="currentImage" class="img-responsive" src="http://5.kicksonfire.net/wp-content/uploads/2015/10/Release-Date-Hologram-Nike-Air-Foamposite-One-2.jpg?9a1c09"></div>
           <div class="col-md-5">
           <ul>
             <li>These pair of Foamposites are a great pair of shoes for a night out with friends or a day in the court. The Foamposties are a great pair of shoe to play basketball inn because of the nice firm hold that gives off.These Foamposites have a  kaleidoscopic upper that rests on top of an icy outsole which they color stands out with a little shine from the light making it look super clean. </li>
