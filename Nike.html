@@ -35,7 +35,42 @@
       
       <div class="row">
         <div class="col-md-2"></div>
-        <div class="col-md-3"><img class="img-responsive" src="http://5.kicksonfire.net/wp-content/uploads/2015/10/Release-Date-Hologram-Nike-Air-Foamposite-One-2.jpg?9a1c09"></div>
+        <div class="col-md-3"><img id="currentImage"  <script>
+    
+    	// This is the current index we're showing in the image array.
+      var currentImageIndex = 0;
+
+			// This is the list of images we'll rotate through.
+      var images = [							
+        "https://www.ruvilla.com/media/catalog/product/n/i/nike_314996-900_01.jpg",
+        "http://4.kicksonfire.net/wp-content/uploads/2015/08/Get-a-Closer-Look-at-the-Nike-Air-Foamposite-One-%E2%80%9CHologram%E2%80%9D-3.jpg?9a1c09",
+        "http://sneakerbardetroit.com/wp-content/uploads/2015/10/hologram-nike-foamposite-one-release-date-4.jpg",
+        "http://5.kicksonfire.net/wp-content/uploads/2015/11/Nike-Air-Foamposite-One-1.jpg?9a1c09"
+      ];
+
+			// This function will update the image and the image index.
+			function updateImage() {
+
+				// Find the image to update.
+				var image = document.getElementById("currentImage");
+
+				// Assign the "src" attribute the new URL.
+				image.src = images[currentImageIndex];
+        
+        // Move to the next index.
+        currentImageIndex = currentImageIndex + 1;
+        
+        // If we've passed the end of the array, start over at 0.
+        if(currentImageIndex >= images.length)
+        	currentImageIndex = 0;
+
+			}
+      
+      // Set an interval timer that calls updateImage() every 1000 milliseconds
+      setInterval(updateImage, 1000);
+      
+		</script>
+		class="img-responsive" src="http://5.kicksonfire.net/wp-content/uploads/2015/10/Release-Date-Hologram-Nike-Air-Foamposite-One-2.jpg?9a1c09"></div>
           <div class="col-md-5">
           <ul>
             <li>These pair of Foamposites are a great pair of shoes for a night out with friends or a day in the court. The Foamposties are a great pair of shoe to play basketball inn because of the nice firm hold that gives off.These Foamposites have a  kaleidoscopic upper that rests on top of an icy outsole which they color stands out with a little shine from the light making it look super clean. </li>
